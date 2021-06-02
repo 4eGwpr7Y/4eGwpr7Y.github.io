@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+['Category','4eGwpr7Y','Alex','Colimeer','Dave Mooo','DavidCooper','Gorbea','Kwl','Martin Bético','Matt147','Mike','Smutenheimer','Tanit','Tizerl','Vitor Gonçalves'],
+['All categories',91.33,95.00,90.67,93.68,92.33,92.67,89.33,88.93,91.00,96.00,83.93,96.32,95.33,89.33],
+['Art and Literature',91.67,95.17,94.00,93.67,90.33,94.67,90.33,88.33,94.00,96.99,78.62,97.33,97.67,86.90],
+['Science',92.69,90.38,85.38,94.23,85.38,90.38,88.80,80.00,88.46,91.15,87.69,92.31,90.77,90.77],
+['Entertainment',86.15,92.08,91.92,90.77,92.31,88.08,94.23,75.60,96.92,92.31,86.92,94.21,91.54,94.23],
+['Sports',91.89,95.77,82.52,93.85,100.00,90.38,91.15,96.15,96.54,96.91,82.80,97.30,96.53,97.69]
+        ]);
+
+        var options = {
+          title: 'Performances',
+          focusTarget: 'category',
+          legend: { position: 'right' },
+          vAxis: {minValue: 80}
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
     <style>
 
       h1 {
@@ -40,7 +67,6 @@
       table.minimalistBlack {
          font-family: arial, sans-serif;
 	  border: 0px solid #000000;
-	  width: 75%;
 	  text-align: left;
 	  border-collapse: collapse;
           white-space: nowrap;
@@ -79,32 +105,68 @@
 
 <div align="center">
 
-<h2>Ranking after Round 4</h2>
+<h2>Ranking after Round 5</h2>
 
 <table border="1" width="75%" class="minimalistBlack">
 <tbody>
-<tr align="right"><td align="left" width="2%"></td><th width="20%"></th><td>R1</td><td>R2</td><td>R3</td><td>R4</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Points</td></tr>
-<tr><td align="left" width="2%">1.</td><th width="20%">Tizerl</th><td>&#129352;</td><td>&#129352;</td><td>&#129351;</td><td>10</td><td></td><td></td><td></td><td>62</td></tr>
-<tr><td align="left" width="2%">2.</td><th width="20%">Alex</th><td>&#129353;</td><td>5</td><td>&#129352;</td><td>8</td><td></td><td></td><td></td><td>47</td></tr>
-<tr><td align="left" width="2%">3.</td><th width="20%">Mike</th><td>&#129351;</td><td>&#129353;</td><td>8</td><td>9</td><td></td><td></td><td></td><td>46</td></tr>
-<tr><td align="left" width="2%">4.</td><th width="20%">Tanit</th><td>4</td><td>4</td><td>6</td><td>7</td><td></td><td></td><td></td><td>38</td></tr>
-<tr><td align="left" width="2%">5.</td><th width="20%">Kwl</th><td>6</td><td>11</td><td>&#129353;</td><td>&#129353;</td><td></td><td></td><td></td><td>38</td></tr>
-<tr><td align="left" width="2%">6.</td><th width="20%">Matt147</th><td>9</td><td>6</td><td>10</td><td>&#129351;</td><td></td><td></td><td></td><td>36</td></tr>
-<tr><td align="left" width="2%">7.</td><th width="20%">Dave&nbsp;Mooo</th><td>11</td><td>7</td><td>5</td><td>&#129352;</td><td></td><td></td><td></td><td>34</td></tr>
-<tr><td align="left" width="2%">8.</td><th width="20%">Colimeer</th><td>10</td><td>&#129351;</td><td>11</td><td>6</td><td></td><td></td><td></td><td>34</td></tr>
-<tr><td align="left" width="2%">9.</td><th width="20%">Vitor&nbsp;Gonçalves</th><td>15</td><td>13</td><td>7</td><td>&#129353;</td><td></td><td></td><td></td><td>21</td></tr>
-<tr><td align="left" width="2%">10.</td><th width="20%">4eGwpr7Y</th><td>8</td><td>8</td><td>4</td><td>12</td><td></td><td></td><td></td><td>20</td></tr>
-<tr><td align="left" width="2%">11.</td><th width="20%">DavidCooper</th><td>5</td><td>12</td><td>13</td><td>5</td><td></td><td></td><td></td><td>20</td></tr>
-<tr><td align="left" width="2%">12.</td><th width="20%">Gorbea</th><td>7</td><td>10</td><td>9</td><td>13</td><td></td><td></td><td></td><td>9</td></tr>
-<tr><td align="left" width="2%">13.</td><th width="20%">Nimusa25</th><td>13</td><td>9</td><td>16</td><td>16</td><td></td><td></td><td></td><td>2</td></tr>
-<tr><td align="left" width="2%">14.</td><th width="20%">Smutenheimer</th><td>16</td><td>16</td><td>12</td><td>11</td><td></td><td></td><td></td><td>0</td></tr>
-<tr><td align="left" width="2%">15.</td><th width="20%">Martin&nbsp;Bético</th><td>14</td><td>14</td><td>14</td><td>14</td><td></td><td></td><td></td><td>0</td></tr>
-<tr><td align="left" width="2%">16.</td><th width="20%">Zorba</th><td>12</td><td>15</td><td>15</td><td>15</td><td></td><td></td><td></td><td>0</td></tr>
+<tr align="right"><td align="left" width="2%"></td><th width="20%"></th><td>R1</td><td>R2</td><td>R3</td><td>R4</td><td>R5</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>Points</td><td width="10%"></td></tr>
+<tr><td align="left" width="2%">1.</td><th width="20%">Tizerl</th><td>&#129352;</td><td>&#129352;</td><td>&#129351;</td><td>10</td><td>6</td><td></td><td></td><td>70</td><td width="10%">94.49 %</td></tr>
+<tr><td align="left" width="2%">2.</td><th width="20%">Tanit</th><td>4</td><td>4</td><td>6</td><td>7</td><td>&#129353;</td><td></td><td></td><td>53</td><td width="10%">95.57 %</td></tr>
+<tr><td align="left" width="2%">3.</td><th width="20%">Alex</th><td>&#129353;</td><td>5</td><td>&#129352;</td><td>8</td><td>7</td><td></td><td></td><td>53</td><td width="10%">93.78 %</td></tr>
+<tr><td align="left" width="2%">4.</td><th width="20%">Mike</th><td>&#129351;</td><td>&#129353;</td><td>8</td><td>9</td><td>9</td><td></td><td></td><td>48</td><td width="10%">94.78 %</td></tr>
+<tr><td align="left" width="2%">5.</td><th width="20%">Matt147</th><td>9</td><td>6</td><td>10</td><td>&#129351;</td><td>5</td><td></td><td></td><td>46</td><td width="10%">93.33 %</td></tr>
+<tr><td align="left" width="2%">6.</td><th width="20%">DavidCooper</th><td>5</td><td>12</td><td>13</td><td>5</td><td>&#129351;</td><td></td><td></td><td>45</td><td width="10%">92.03 %</td></tr>
+<tr><td align="left" width="2%">7.</td><th width="20%">Kwl</th><td>6</td><td>11</td><td>&#129353;</td><td>&#129353;</td><td>11</td><td></td><td></td><td>38</td><td width="10%">90.73 %</td></tr>
+<tr><td align="left" width="2%">8.</td><th width="20%">Dave&nbsp;Mooo</th><td>11</td><td>7</td><td>5</td><td>&#129352;</td><td>10</td><td></td><td></td><td>35</td><td width="10%">93.23 %</td></tr>
+<tr><td align="left" width="2%">9.</td><th width="20%">Colimeer</th><td>10</td><td>&#129351;</td><td>11</td><td>6</td><td>14</td><td></td><td></td><td>34</td><td width="10%">89.71 %</td></tr>
+<tr><td align="left" width="2%">10.</td><th width="20%">Vitor&nbsp;Gonçalves</th><td>15</td><td>13</td><td>7</td><td>&#129353;</td><td>4</td><td></td><td></td><td>33</td><td width="10%">91.61 %</td></tr>
+<tr><td align="left" width="2%">11.</td><th width="20%">4eGwpr7Y</th><td>8</td><td>8</td><td>4</td><td>12</td><td>8</td><td></td><td></td><td>24</td><td width="10%">90.79 %</td></tr>
+<tr><td align="left" width="2%">12.</td><th width="20%">Martin&nbsp;Bético</th><td>14</td><td>14</td><td>14</td><td>14</td><td>&#129352;</td><td></td><td></td><td>18</td><td width="10%">86.00 %</td></tr>
+<tr><td align="left" width="2%">13.</td><th width="20%">Gorbea</th><td>7</td><td>10</td><td>9</td><td>13</td><td>12</td><td></td><td></td><td>9</td><td width="10%">91.38 %</td></tr>
+<tr><td align="left" width="2%">14.</td><th width="20%">Nimusa25</th><td>13</td><td>9</td><td>16</td><td>16</td><td>16</td><td></td><td></td><td>2</td><td width="10%">89.15 %</td></tr>
+<tr><td align="left" width="2%">15.</td><th width="20%">Smutenheimer</th><td>16</td><td>16</td><td>12</td><td>11</td><td>13</td><td></td><td></td><td>0</td><td width="10%">83.88 %</td></tr>
+<tr><td align="left" width="2%">16.</td><th width="20%">Zorba</th><td>12</td><td>15</td><td>15</td><td>15</td><td>15</td><td></td><td></td><td>0</td><td width="10%">86.33 %</td></tr>
+</tbody>
+</table>
+<hr width=90% style="height:5px;border:none;color:#000;background-color:#000;margin:50px 0;"/>
+<h2>Overview Rounds</h2>
+
+<table width="50%" class="minimalistBlack">
+<tbody>
+<tr><th>Round 1</th><th style="color:#37474f">All categories</th><td style="color:green">91.03% correct</td><td>(4232)</td></tr>
+<tr><th>Round 2</th><th style="color:#795548">Art and Literature</th><td style="color:green">91.89% correct</td><td>(4373)</td></tr>
+<tr><th>Round 3</th><th style="color:#4caf50">Science</th><td style="color:green">89.17% correct</td><td>(3237)</td></tr>
+<tr><th>Round 4</th><th style="color:#ec407a">Entertainment</th><td style="color:green">90.55% correct</td><td>(3268)</td></tr>
+<tr><th>Round 5</th><th style="color:#ff9800">Sports</th><td style="color:green">93.93% correct</td><td>(3296)</td></tr>
+</tbody>
+</table>
+<hr width=90% style="height:5px;border:none;color:#000;background-color:#000;margin:50px 0;"/>
+<h2>Results Round 5</h2>
+<h3 style="color:#ff9800">Sports</h3>
+
+<table class="minimalistBlack">
+<tbody>
+<tr><th width="20%">DavidCooper</th><td>&#129351;</td><td>38</td><td style="color:green">260</td><td style="color:darkred">0</td><td>100.00%</td></tr>
+<tr><th width="20%">Martin&nbsp;Bético</th><td>&#129352;</td><td>37</td><td style="color:green">250</td><td style="color:darkred">10</td><td>96.15%</td></tr>
+<tr><th width="20%">Tanit</th><td>&#129353;</td><td>33</td><td style="color:green">252</td><td style="color:darkred">7</td><td>96.92%</td></tr>
+<tr><th width="20%">Vitor&nbsp;Gonçalves</th><td>4</td><td>30</td><td style="color:green">254</td><td style="color:darkred">6</td><td>97.69%</td></tr>
+<tr><th width="20%">Matt147</th><td>5</td><td>30</td><td style="color:green">251</td><td style="color:darkred">9</td><td>96.54%</td></tr>
+<tr><th width="20%">Tizerl</th><td>6</td><td>30</td><td style="color:green">250</td><td style="color:darkred">9</td><td>96.15%</td></tr>
+<tr><th width="20%">Alex</th><td>7</td><td>30</td><td style="color:green">249</td><td style="color:darkred">11</td><td>95.77%</td></tr>
+<tr><th width="20%">4eGwpr7Y</th><td>8</td><td>29</td><td style="color:green">238</td><td style="color:darkred">21</td><td>91.54%</td></tr>
+<tr><th width="20%">Mike</th><td>9</td><td>27</td><td style="color:green">251</td><td style="color:darkred">8</td><td>96.54%</td></tr>
+<tr><th width="20%">Dave&nbsp;Mooo</th><td>10</td><td>27</td><td style="color:green">244</td><td style="color:darkred">16</td><td>93.85%</td></tr>
+<tr><th width="20%">Kwl</th><td>11</td><td>23</td><td style="color:green">237</td><td style="color:darkred">23</td><td>91.15%</td></tr>
+<tr><th width="20%">Gorbea</th><td>12</td><td>14</td><td style="color:green">235</td><td style="color:darkred">25</td><td>90.38%</td></tr>
+<tr><th width="20%">Smutenheimer</th><td>13</td><td>10</td><td style="color:green">207</td><td style="color:darkred">43</td><td>79.62%</td></tr>
+<tr><th width="20%">Colimeer</th><td>14</td><td>6</td><td style="color:green">118</td><td style="color:darkred">25</td><td>45.38%</td></tr>
+<tr><th width="20%">Zorba</th><td>15</td><td>0</td><td style="color:green">0</td><td style="color:darkred">0</td><td>00.00%</td></tr>
+<tr><th width="20%">Nimusa25</th><td>16</td><td>0</td><td style="color:green">0</td><td style="color:darkred">0</td><td>00.00%</td></tr>
 </tbody>
 </table>
 <hr width=90% style="height:5px;border:none;color:#000;background-color:#000;margin:50px 0;"/>
 <h2>Results Round 4</h2>
-<h3>Entertainment</h3>
+<h3 style="color:#ec407a">Entertainment</h3>
 
 <table class="minimalistBlack">
 <tbody>
@@ -128,7 +190,7 @@
 </table>
 <hr width=90% style="height:5px;border:none;color:#000;background-color:#000;margin:50px 0;"/>
 <h2>Results Round 3</h2>
-<h3>Science</h3>
+<h3 style="color:#4caf50">Science</h3>
 
 <table class="minimalistBlack">
 <tbody>
@@ -152,7 +214,7 @@
 </table>
 <hr width=90% style="height:5px;border:none;color:#000;background-color:#000;margin:50px 0;"/>
 <h2>Results Round 2</h2>
-<h3>Art and Literature</h3>
+<h3 style="color:#795548">Art and Literature</h3>
 
 <table class="minimalistBlack">
 <tbody>
@@ -176,7 +238,7 @@
 </table>
 <hr width=90% style="height:5px;border:none;color:#000;background-color:#000;margin:50px 0;"/>
 <h2>Results Round 1</h2>
-<h3>All categories</h3>
+<h3 style="color:#37474f">All categories</h3>
 
 <table class="minimalistBlack">
 <tbody>
